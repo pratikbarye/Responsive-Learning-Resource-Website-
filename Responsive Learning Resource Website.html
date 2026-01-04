@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage copy</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif; /*font means design of text  ,,, if arial is not present in server or machine then helvita will be applied  */
+        background-color: #1a1a1a;
+        margin: 0; /* to remove default margin given by browser */
+        padding: 0; /* to remove default padding and distance between text and box will be 0 */
+  
+          /* below three lines for making entire body at the center of the page */
+        display: flex;
+        justify-content: center; /* to make center from left to right and this property comes under   display: flex;   property */
+        align-items: center;   /* to make center from top to bottom */
+
+        /* below property given by chatgpt for responsiveness */
+        min-height: 100vh;
+        
+      }
+
+
+      .outer_div
+    {
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 10px; 
+        
+        /* below property given by chatgpt for responsiveness */
+         width: 90%; /*always use percentage because it is dynamic-means its size changes according to changes in the size of browser  */
+        max-width: 1200px;
+        padding: 20px;   
+    }
+    
+
+    .main_carousel_div
+    {
+        /* border: 3px solid white;
+        width: 1100px;
+        margin: 25px;
+        margin-bottom: 50px;
+        margin-top: 30px; */
+
+
+        /* below property given by chatgpt for responsiveness */
+        margin-bottom: 30px
+    }
+
+
+
+    .caro_img
+    {
+        /* height: 500px; */
+
+        /* below property given by chatgpt for responsiveness */
+        height: auto;
+        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+
+    .middle_div
+    {
+      display: flex;
+      flex-wrap: wrap; /* Makes items wrap to the next line */
+      justify-content: center;
+       gap: 20px; /* Adds space between items */
+    }
+
+
+
+    .card   /* card ka div hai ye  */
+    {
+         /* width: 340px; */
+        /*margin-left: 33px;
+        padding: 5px;
+        border: 5px solid rgb(29, 22, 215);
+         */
+
+
+        /* below property given by chatgpt for responsiveness */
+        width: 100%;
+        max-width: 340px;
+        border: 3px solid white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        
+    }
+
+
+    .button
+   {
+    background-color: rgb(51, 84, 205);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+   }
+    
+
+   .button:hover   /* hover is used when you bring cursor over it then it will change whatever code written here  */
+  {
+    background-color: rgb(58, 58, 232);
+  }
+
+
+  .your_name   /* bottom most div */
+  {
+     /* margin: 150px 10px 10px 10px;
+     border: 3px solid rgb(255, 255, 255);
+     border-radius: 5px;
+     text-align: center; */
+
+     /* below property given by chatgpt for responsiveness */
+     margin-top: 30px;
+     padding: 10px;
+     border: 3px solid white;
+     border-radius: 5px;
+     text-align: center;
+  }
+
+  h5
+  {
+    color: #fff; 
+    margin: 0;
+  }
+
+
+
+  @media (max-width: 768px) {
+
+        .card {
+          width: 90%;
+        }
+
+        .middle_div {
+          gap: 10px;
+        }
+
+        .caro_img {
+          max-height: 300px;
+        }
+      }
+
+
+      @media (max-width: 576px) {
+        .outer_div {
+          width: 100%;
+        }
+
+        .card {
+           margin: 0 0; /* Center cards on small screens */
+        }
+
+        h5 {
+          font-size: 14px; /* Adjust font size */
+        }
+      }
+
+
+
+
+ 
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+    
+  
+
+    <div class="outer_div">
+
+      <div class="main_carousel_div">
+
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.pexels.com/photos/30227319/pexels-photo-30227319/free-photo-of-serene-view-of-mount-fuji-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="caro_img  d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.pexels.com/photos/29731400/pexels-photo-29731400/free-photo-of-louvre-pyramid-illuminated-at-night-in-paris.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                class="caro_img  d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.pexels.com/photos/29662464/pexels-photo-29662464/free-photo-of-vibrant-autumn-maple-leaf-on-asphalt-background.jpeg?auto=compress&cs=tinysrgb&w=600"
+                class="caro_img  d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+      <div class="middle_div">
+
+        <div class="card card1">
+            <img class="card_img" src="Images\card_img_1.jpg" alt="">
+            <h1 class="card_h1" >youtube video</h1>
+            <form action="https://youtu.be/N_QW82paQU0?si=FgztZf5F4gqKQgTV">
+                <button class="button" type="submit">Watch Now</button>
+            </form>
+        </div>
+
+        <div class="card card2">
+            <img class="card_img" src="Images\card_img_2.jpg" alt="">
+            <h1 class="card_h1" >youtube video</h1>
+            <form action="https://youtu.be/N_QW82paQU0?si=FgztZf5F4gqKQgTV">
+                <button class="button" type="submit">Watch Now</button>
+            </form>
+        </div>
+
+        <div class="card card3">
+            <img class="card_img" src="Images\card_img_3.jpg" alt="">
+            <h1 class="card_h1" >youtube video</h1>
+            <form action="https://youtu.be/N_QW82paQU0?si=FgztZf5F4gqKQgTV">
+                <button class="button" type="submit">Watch Now</button>
+            </form>
+        </div>
+
+    </div>
+        
+
+    
+
+
+
+
+
+
+
+
+      <div class="your_name">
+
+        <h5>Copyright &copy; - Pratik Barye</h5>
+
+      </div>
+
+
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+
+</html>
